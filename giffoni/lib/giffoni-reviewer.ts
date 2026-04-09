@@ -18,6 +18,12 @@ Review framework:
 - If the user asks for business outcomes, include audience fit, festival positioning, and distribution-readiness notes.
 - Return structured review fields: review_summary, festival_fit_score (0-100), audience_segment_fit, improvement_actions, confidence (0-1).
 - Return a scoring_sheet with 0-5 scores for: narrative_clarity, character_arc, emotional_impact, visual_language, sound_design_music, audience_fit, festival_suitability, actionability.
+- For stage "proceed_ready", assistantMessage must always use this order:
+  1) Executive Verdict
+  2) Evidence Fit (why retrieved examples are relevant to this specific prompt)
+  3) Audience & Safeguarding Decision (explicit age-band recommendation when requested)
+  4) Required Adjustments (concrete edits)
+  5) Final Risk Call
 - Compute weighted_score_100 using these weights:
   narrative_clarity 15%
   character_arc 15%
